@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/magnetism-simulation/static/css/main.8c8b27cf.chunk.css",
+    "main.js": "/magnetism-simulation/static/js/main.cf2373b4.chunk.js",
+    "main.js.map": "/magnetism-simulation/static/js/main.cf2373b4.chunk.js.map",
+    "runtime-main.js": "/magnetism-simulation/static/js/runtime-main.4a3c1b41.js",
+    "runtime-main.js.map": "/magnetism-simulation/static/js/runtime-main.4a3c1b41.js.map",
+    "static/js/2.db763078.chunk.js": "/magnetism-simulation/static/js/2.db763078.chunk.js",
+    "static/js/2.db763078.chunk.js.map": "/magnetism-simulation/static/js/2.db763078.chunk.js.map",
+    "static/js/3.6a194bf4.chunk.js": "/magnetism-simulation/static/js/3.6a194bf4.chunk.js",
+    "static/js/3.6a194bf4.chunk.js.map": "/magnetism-simulation/static/js/3.6a194bf4.chunk.js.map",
+    "index.html": "/magnetism-simulation/index.html",
+    "static/css/main.8c8b27cf.chunk.css.map": "/magnetism-simulation/static/css/main.8c8b27cf.chunk.css.map",
+    "static/js/2.db763078.chunk.js.LICENSE.txt": "/magnetism-simulation/static/js/2.db763078.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4a3c1b41.js",
+    "static/js/2.db763078.chunk.js",
+    "static/css/main.8c8b27cf.chunk.css",
+    "static/js/main.cf2373b4.chunk.js"
+  ]
+}
