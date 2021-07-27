@@ -13,11 +13,7 @@ const App = () => {
 
   const plotE = useMemo(() => {
     const CENTER = new Vector2(0, 0);
-    const theta1_angle = Array.from(
-      { length: size },
-      (_, i) => (360 / size) * i
-    );
-    const theta2_angle = Array.from(
+    const theta_angle = Array.from(
       { length: size },
       (_, i) => (360 / size) * i
     );
@@ -32,10 +28,10 @@ const App = () => {
     for (let i = 0; i < size; i++) {
       for (let j = 0; j < size; j++) {
         E[i][j] = J * S1.dot(S2) + delta1 * S1.y * S1.y + delta2 * S2.y * S2.y;
-        if (E[i][j] - minE < -1e-12) {
+        if (E[i][j] - minE < -1e-13) {
           minE = E[i][j];
-          minTheta1Angle = theta1_angle[i];
-          minTheta2Angle = theta2_angle[j];
+          minTheta1Angle = theta_angle[j];
+          minTheta2Angle = theta_angle[i];
         }
         S2.rotateAround(CENTER, ((360 / size) * Math.PI) / 180);
       }
@@ -50,17 +46,35 @@ const App = () => {
           data={[
             {
               z: E,
-              x: theta1_angle,
-              y: theta2_angle,
+              x: theta_angle,
+              y: theta_angle,
               type: "contour",
-              ncontours: 360,
-              line: { width: 0 },
+              // ncontours: 360,
+              contours: {
+                showlabels: true,
+                labelfont: {
+                  family: "Raleway",
+                  size: 12,
+                  color: "white",
+                },
+              },
+              // line: { width: 0 },
+              colorbar: {
+                title: "Energy",
+                titleside: "right",
+              },
             },
           ]}
           layout={{
             width: 1080,
             height: 720,
             title: "H = JS1･S2 + Δ1|S1z|^2 + Δ2|S2z|^2",
+            xaxis: {
+              title: "θ1 (degree)",
+            },
+            yaxis: {
+              title: "θ2 (degree)",
+            },
           }}
         />
       </>
