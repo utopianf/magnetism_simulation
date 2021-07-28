@@ -1,15 +1,13 @@
-import "./App.css";
-
 import React, { useMemo, useState } from "react";
 import Plot from "react-plotly.js";
 import { Vector2 } from "three";
 
-const App = () => {
+const App = ({ initJ, initDelta1, initDelta2 }) => {
   const size = 360;
 
-  const [J, setJ] = useState(3e-3);
-  const [delta1, setDelta1] = useState(-15e-6);
-  const [delta2, setDelta2] = useState(12e-6);
+  const [J, setJ] = useState(initJ ? initJ : 3e-3);
+  const [delta1, setDelta1] = useState(initDelta1 ? initDelta1 : -15e-6);
+  const [delta2, setDelta2] = useState(initDelta2 ? initDelta2 : 12e-6);
 
   const plotE = useMemo(() => {
     const CENTER = new Vector2(0, 0);
