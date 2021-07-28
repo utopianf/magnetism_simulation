@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import dynamic from "next/dynamic";
 import React from "react";
 
-const DynamicComponentWithNoSSR = dynamic(() => import("./App"), {
+const DynamicComponentWithNoSSR = dynamic(() => import("../components/App"), {
   ssr: false,
 });
 
